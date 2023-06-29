@@ -7,7 +7,7 @@ function CustomCard({ pokemon, image, setActivePokemon }) {
   if (error) return <h1>Something went wrong!</h1>
   if (!result) return <h1>Loading...</h1>
   
-  const paddedId = ('00' + (result.id+1)).slice(-3);
+  const paddedId = ('00' + (result.id)).slice(-3);
   const type = result.types[0].type.name;
   let bgType = 'bg-emerald-400';
   switch (type) {
